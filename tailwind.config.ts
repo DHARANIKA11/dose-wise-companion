@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,31 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Medicine app custom colors
+				"med-blue": {
+					"50": "#e6f3fe",
+					"100": "#cce7fd",
+					"200": "#99cefc",
+					"300": "#66b6fa",
+					"400": "#339ef9",
+					"500": "#0086f7",
+					"600": "#006bc6",
+					"700": "#005094",
+					"800": "#003563",
+					"900": "#001b31"
+				},
+				"med-green": {
+					"50": "#edf8ee",
+					"100": "#dbf1dd",
+					"200": "#b7e3bc",
+					"300": "#93d59a",
+					"400": "#6ec879",
+					"500": "#4aba57",
+					"600": "#3b9546",
+					"700": "#2d7034",
+					"800": "#1e4a23",
+					"900": "#0f2511"
 				}
 			},
 			borderRadius: {
@@ -84,11 +110,22 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'fade-in': {
+					"0%": {
+						opacity: "0",
+						transform: "translateY(10px)"
+					},
+					"100%": {
+						opacity: "1",
+						transform: "translateY(0)"
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.3s ease-out'
 			}
 		}
 	},
