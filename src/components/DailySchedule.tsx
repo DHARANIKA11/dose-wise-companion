@@ -3,7 +3,7 @@ import { useMedication } from "@/context/MedicationContext";
 import { DAYS_SHORT } from "@/types/medication";
 import { format } from "date-fns";
 import { useState, useMemo } from "react";
-import { Pill } from "lucide-react";
+import { Pill, Calendar as CalendarIcon } from "lucide-react";
 import { Card } from "./ui/card";
 import { Button } from "./ui/button";
 
@@ -148,7 +148,7 @@ export const DailySchedule = () => {
       {scheduledMedications.length === 0 ? (
         <Card className="p-8 text-center">
           <div className="flex flex-col items-center justify-center space-y-3">
-            <Calendar className="h-12 w-12 text-med-blue-300" />
+            <CalendarIcon className="h-12 w-12 text-med-blue-300" />
             <h3 className="font-medium text-lg">No Medications Scheduled</h3>
             <p className="text-sm text-gray-500">
               There are no medications scheduled for {DAYS_SHORT[dayOfWeek]}.
